@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>إيليت مارت | EliteMart</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap');
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0f172a;
+      color: #f1f5f9;
+      direction: rtl;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      text-align: center;
+      padding: 40px 20px 20px;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      background: white;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin: 0;
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: white;
+      color: #0f172a;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .container {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #22d3ee;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 16px;
+      color: #cbd5e1;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      background: #22c55e;
+      color: #fff;
+      padding: 14px;
+      text-align: center;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background: #16a34a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0f172a;
+      color: #64748b;
+      font-size: 14px;
+      margin-top: 40px;
+      border-top: 1px solid #1e293b;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="lang-switch" onclick="toggleLanguage()">تغيير اللغة</button>
+    <img src="logo.png" alt="شعار إيليت مارت">
+    <h1 id="title">متجر إيليت مارت</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2 id="about-title">عن إيليت مارت</h2>
+      <p id="about-text">
+        إيليت مارت هو وجهتك المميزة لأحدث الإكسسوارات التقنية، السماعات، أدوات اللعب والترفيه للأطفال والكبار. نوفر منتجات عالية الجودة بأسعار مناسبة وتجربة شراء إلكترونية سلسة وآمنة. هدفنا هو رضاك الكامل وتوفير أفضل دعم وخدمة.
+      </p>
+    </div>
+
+    <div class="buttons">
+      <a href="mailto:info.elitemart2024@gmail.com" id="complaint-btn">📨 إرسال شكوى الآن</a>
+      <a href="https://wa.me/201044942079" target="_blank" id="contact-btn">💬 تواصل معنا على واتساب</a>
+    </div>
+  </div>
+
+  <footer id="footer">
+    جميع الحقوق محفوظة © إيليت مارت 2025
+  </footer>
+
+  <script>
+    let isArabic = true;
+
+    function toggleLanguage() {
+      isArabic = !isArabic;
+
+      if (isArabic) {
+        document.documentElement.lang = "ar";
+        document.body.dir = "rtl";
+        document.querySelector('.lang-switch').textContent = "تغيير اللغة";
+        document.getElementById("title").textContent = "متجر إيليت مارت";
+        document.getElementById("about-title").textContent = "عن إيليت مارت";
+        document.getElementById("about-text").textContent = "إيليت مارت هو وجهتك المميزة لأحدث الإكسسوارات التقنية، السماعات، أدوات اللعب والترفيه للأطفال والكبار. نوفر منتجات عالية الجودة بأسعار مناسبة وتجربة شراء إلكترونية سلسة وآمنة. هدفنا هو رضاك الكامل وتوفير أفضل دعم وخدمة.";
+        document.getElementById("complaint-btn").textContent = "📨 إرسال شكوى الآن";
+        document.getElementById("contact-btn").textContent = "💬 تواصل معنا على واتساب";
+        document.getElementById("footer").textContent = "جميع الحقوق محفوظة © إيليت مارت 2025";
+      } else {
+        document.documentElement.lang = "en";
+        document.body.dir = "ltr";
+        document.querySelector('.lang-switch').textContent = "Switch Language";
+        document.getElementById("title").textContent = "EliteMart Store";
+        document.getElementById("about-title").textContent = "About EliteMart";
+        document.getElementById("about-text").textContent = "EliteMart is your go-to destination for the latest tech accessories, speakers, and entertainment tools for kids and adults. We offer high-quality products at great prices with a smooth, secure shopping experience. Our goal is your satisfaction with top service.";
+        document.getElementById("complaint-btn").textContent = "📨 Submit a Complaint";
+        document.getElementById("contact-btn").textContent = "💬 Contact us on WhatsApp";
+        document.getElementById("footer").textContent = "All rights reserved © EliteMart 2025";
+      }
+    }
+  </script>
+</body>
+</html>
